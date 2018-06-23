@@ -1,5 +1,5 @@
 
-<form action="" method="post">
+<form action="showposts.php" method="post">
   Tytuł posta: <input type="text" name="title"><br/>
   Treść posta: <textarea name="body" rows="20" cols="50"></textarea><br/></br>
   <input type="submit" value="Dodaj">

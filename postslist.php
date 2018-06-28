@@ -2,13 +2,8 @@
 
 include("connect.php");
 
-$query = mysqli_query("select * from tygposts order by id desc");
+$query = mysqli_query($link, "SELECT * FROM posts ORDER BY id DESC");
 
-$naz="";
-
-while($rekord = mysqli_fetch_array($query))
-{
-$naz .= '<li><a href="tygposts.php?id='.$rekord[0].'">'.$rekord[1].'</a></li>';
+while($post = mysqli_fetch_array($query)) {
+	echo '<ul><li><a href="showposts.php?id='.$post["id"].'">'.$post["title"].'</a></li></ul>';
 }
-echo '<ul>'.$naz.'</ul>';
-?>

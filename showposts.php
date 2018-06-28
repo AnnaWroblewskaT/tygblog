@@ -1,5 +1,5 @@
 <?php
-if($_SERVER['REQUEST_METHOD']==='POST') {
+if($_SERVER['REQUEST_METHOD']==='GET') {
 
 
   $title="";
@@ -7,8 +7,8 @@ if($_SERVER['REQUEST_METHOD']==='POST') {
 
   //if(isset($_POST['title']===true && $_POST['body']===true )) {
 
-    $title=trim($_POST['title']);
-    $body=trim($_POST['body']);
+    $title=trim($_GET['title']);
+    $body=trim($_GET['body']);
   }
 
   else {
